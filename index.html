@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- viewport declaration for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Twitter's Sentiment</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css">  <!--bootstrap for styling-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body>    
+    <div class="container clearfix"> <!-- content -->
+    
+        <h1><i class="fa fa-twitter" style="color:#55acee"></i> Twitter's Sentiment</h1>
+        
+        <div style="margin-bottom:1em; font-size:1.2em">
+                <input name="query" placeholder="Search for tweets..." id="searchBox">
+                <button id="searchButton"><i class="fa fa-search"></i></button>
+        </div>        
+        
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr>
+                    <th class="col-md-2">Name</th>
+                    <th id="dateHeader" class="col-md-2">Date</th>
+                    <th class="col-md-5">Tweet</th>
+                    <th class="col-md-2">Hashtags</th>
+                    <th id="retweetHeader" class="col-md-1">Retweets</th>
+                    <th id="sentimentHeader" class="col-md-1">Sentiment</th>            
+                </tr>
+                <tbody id="tweetTable">
+                    <!--Content will go here-->
+                    <tr>
+                      <td>username</td>
+                      <td>May 13, 2016 13:52:19 GMT</td> <!-- posting date; formatted -->
+                      <td>This is an example tweet! #example #hashtags #programmingrocks</td> <!-- tweet text -->
+                      <td>example, tags, programmingrocks</td> <!-- comma-separate list of hashtags -->
+                      <td>10</td> <!-- retweet count -->
+                      <td>2</td> <!-- sentiment score; will add in later -->
+                    </tr>
+                </tbody>                
+            </table>
+        </div>
+  
+    </div>
+    <script src="lib/jquery-2.2.3.js"></script> <!-- jQuery library -->
+    <script src="data/dog_var.js"></script> <!-- sample dog data (hard-included) -->
+    <script src="twitter-sentiment.js"></script>
+</body>
+</html>
