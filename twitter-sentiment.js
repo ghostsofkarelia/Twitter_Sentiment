@@ -1,6 +1,7 @@
 'use strict'; //treat silly mistakes as run-time errors
 /**
 @Author: Akshay Singh
+This a sentiment analysis tool that conducts sentiment analysis on tweets from Twitter's public search API. 
 **/
 var globalTweets;
 //console.log(_DOG_TWEETS);
@@ -104,7 +105,7 @@ var loadSentiments=function(filepath){
 	return promise.then(parseSentiments);
 }
 
-//Function to call both loadTweets & loadSentimentsnd and then returning the data from the promise to process it
+//Function to call both loadTweets & loadSentiments and then returning the data from the promise to process it
 var tweetSentiments=function(tweetFile,sentimentFile)
 {
 	var tweetFileFn=loadTweets(tweetFile);
