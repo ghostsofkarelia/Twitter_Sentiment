@@ -45,13 +45,13 @@ var showTweets=function(jsonObject){
 		//Converting date to appropriate format
 		var date = new Date(jsonObject[i].created_at); //creating a date object  
 		var created_at = date.toUTCString();
-		var tableString='<tr><td>'+jsonObject[i]['screen_name']
+		var tableString='<tr><td>'+jsonObject[i]['screen_name']+'</td>'
 		+'<td><td>'+created_at
 		+'</td><td>'+jsonObject[i]['textContent']
 		+'</td><td>'+jsonObject[i]['hashTag'].join(',')
 		+'</td><td>'+jsonObject[i]['retweet_count']
 		+'</td><td>'+jsonObject[i]['sentiment']
-		+'</td></tr>';
+		+'</tr>';
 		//Appending each row to table iteratively
 		$('#tweetTable').append(tableString);
 	}
